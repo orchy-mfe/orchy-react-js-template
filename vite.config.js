@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     svgr(),
     visualizer(),
-    react(),
+    react({ fastRefresh: false }),
     qiankun('orchy-react-js-template', { useDevMode: true }),
   ],
   base: mode === 'development' ? `http://localhost:${port}/` : '/orchy-react-js-template/',

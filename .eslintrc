@@ -16,6 +16,19 @@
       2,
       "single",
       "avoid-escape"
-    ]
+    ],
+    "object-curly-spacing": [
+      2,
+      "never"
+    ],
+    "react/jsx-sort-props": [
+      2,
+      {
+        "ignoreCase": true
+      }
+    ],
+    "react/no-unused-prop-types": 2,
+    "react/sort-prop-types": 2,
+    "react/jsx-filename-extension": 2
   }
 }
