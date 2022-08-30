@@ -1,0 +1,21 @@
+{
+  "plugins": [],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "react-app"
+  ],
+  "rules": {
+    "no-unused-vars": "error",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      2,
+      "single",
+      "avoid-escape"
+    ]
+  }
+}
