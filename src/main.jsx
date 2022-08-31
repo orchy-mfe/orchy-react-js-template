@@ -8,7 +8,7 @@ let root
 
 const retrieveContainer = props => props.container ?? document
 
-const render = (props) => {
+const render = (props = {}) => {
   const container = retrieveContainer(props)
   root = ReactDOM.createRoot(container.querySelector('#root'))
   root.render(
