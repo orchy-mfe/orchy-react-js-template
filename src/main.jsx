@@ -4,11 +4,14 @@ import {renderWithQiankun, qiankunWindow} from 'vite-plugin-qiankun/dist/helper'
 import App from './App'
 import './index.css'
 
+let root
+
 const retrieveContainer = props => props.container ?? document
 
 const render = (props) => {
   const container = retrieveContainer(props)
-  ReactDOM.createRoot(container.querySelector('#root')).render(
+  root = ReactDOM.createRoot(container.querySelector('#root'))
+  root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>
@@ -20,8 +23,8 @@ renderWithQiankun({
     render(props)
   },
   bootstrap() {},
-  unmount(props) {
-    ReactDOM.unmountComponentAtNode(retrieveContainer(props))
+  unmount() {
+    root.unmount()
   },
 })
 
