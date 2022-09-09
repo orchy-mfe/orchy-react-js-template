@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import {StrictMode} from 'react'
+import {createRoot} from 'react-dom/client'
 import {renderWithQiankun, qiankunWindow} from 'vite-plugin-qiankun/dist/helper'
 import App from './App'
 import './index.css'
@@ -10,11 +10,11 @@ const retrieveContainer = props => props.container ?? document
 
 const render = (props = {}) => {
   const container = retrieveContainer(props)
-  root = ReactDOM.createRoot(container.querySelector('#root'))
+  root = createRoot(container.querySelector('#root'))
   root.render(
-    <React.StrictMode>
+    <StrictMode>
       <App />
-    </React.StrictMode>
+    </StrictMode>
   )
 }
 
