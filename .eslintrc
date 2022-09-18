@@ -29,6 +29,10 @@
     ],
     "react/no-unused-prop-types": 2,
     "react/sort-prop-types": 2,
-    "react/jsx-filename-extension": 2
+    "react/jsx-filename-extension": 2,
+    "quote-props": [
+      "error",
+      "as-needed"
+    ]
   }
 }
