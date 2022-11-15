@@ -4,9 +4,8 @@ import {BrowserRouter} from 'react-router-dom'
 import App from './App'
 import './index.css'
 
-import OrchyBaseMfe from '@orchy-mfe/spa-adapter'
-export class ReactMfe extends OrchyBaseMfe {
-  root
+import OrchyMicroFrontend from '@orchy-mfe/spa-adapter'
+export class ReactMfe extends OrchyMicroFrontend {
   async mount(microFrontendProperties) {
     this.root = createRoot(this.getContainer())
     this.root.render(
